@@ -44,6 +44,7 @@
 
      <div class="container" style="margin-top: 6%;">
         <div class="row justify-content-center">
+        
            <div class="col-5">
            
               <form novalidate [formGroup]="formRegister">
@@ -95,6 +96,7 @@
                  <pre class="mb-0">{{ formRegister.value | json }}</pre>
               </div>
            </div>
+           
         </div>
      </div>
      
