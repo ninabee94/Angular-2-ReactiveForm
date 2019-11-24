@@ -1,3 +1,10 @@
+
+![alt](https://user-images.githubusercontent.com/57636419/69494148-f72cbc00-0ef2-11ea-9ccf-a5410b4cd474.JPG)
+
+<b>1. form.component.ts</b>
+
+--------------------------------------------------------------------------------------------------
+
 # ReactiveForm
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
