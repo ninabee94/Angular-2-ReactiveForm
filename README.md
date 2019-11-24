@@ -95,8 +95,17 @@
                  <pre class="mb-0">{{ formRegister.value | json }}</pre>
               </div>
            </div>
-          <iv>
-  </div>
+        </div>
+     </div>
+     
+<b>3. form.component.scss</b>
+
+     .skill{ display: flex; }
+     .tags{ 
+         display: flex;
+         .outer{ padding-left:5px; }
+         .list{ border:1px solid black; padding-left:3px; padding-right:3px; }
+     }
   
 
 
