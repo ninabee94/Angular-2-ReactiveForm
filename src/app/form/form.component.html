@@ -42,11 +42,11 @@
           </div>
           <small class="form-text text-info"><b>Note:</b> Transform this input into a custom tagging input.</small>
           <div class="tags">
-            <div *ngFor="let array_skill of array_skill; let i=index;" class="outer">
-              <div class="list">{{array_skill}}&nbsp;&nbsp;
+            <div *ngFor="let skill of formRegister.get('skills').controls; let i=index;" class="outer">
+              <div class="list">{{skill.value}}&nbsp;&nbsp;
                   <button type="button" class="close" aria-label="Close" (click)="delete(i)">
                       <span aria-hidden="true">×</span>
-                    </button>
+                  </button>
               </div>
             </div>
           </div>
@@ -55,7 +55,6 @@
       <div class="col-5">
         <div class="bg-light p-3 h-100 rounded">
           <pre class="mb-0">{{ formRegister.value | json }}</pre>
-          <pre>{{ array_skill | json }}</pre>
         </div>
       </div>
     </div>

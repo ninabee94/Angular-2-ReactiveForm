@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -10,11 +10,8 @@ export class FormComponent implements OnInit {
 
   public formRegister: FormGroup;
   newskill: string ;
-  array_skill : any = ["creative"];
 
-  constructor(
-    private formBuilder: FormBuilder
-  ) { }
+  constructor(private formBuilder: FormBuilder ) { }
 
   ngOnInit() {
     this.formRegister = this.formBuilder.group({
@@ -25,16 +22,17 @@ export class FormComponent implements OnInit {
     });
   }
 
-  item : FormArray;
-
   newtag(){  
     if( (this.newskill!="") ){
-      this.array_skill.push(this.newskill);
+      const control = <FormArray>this.formRegister.get('skills');
+      control.push(this.formBuilder.control(this.newskill));
+      this.newskill="";
     }
   }
 
   delete(index:number){
-    this.array_skill.splice(index, 1);
+    const control = <FormArray>this.formRegister.get('skills');
+    control.removeAt(index);
   }
 
 }
